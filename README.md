@@ -1,4 +1,4 @@
-# Music-Triangle
+# Music Triangle
 
 ### “Without music, life would be a mistake” ---Friedrich Nietzsche
 
@@ -74,6 +74,17 @@ if len(out) != 0:
 detailed_stats
 
 ```
+
+***
+
+### Dataset/detokenization ratios/restore coefficient calculation
+
+1) Multiplication coefficients are dataset dependent
+2) Coefficients from a large dataset can be transposed to a smaller subset with good results
+3) Coefficients, in this case, are dt and D averages for the entire dataset
+4) For example, coefficients(k) for the provided sample INTs dataset are dtk == 12, Dk == 72
+5) Or namely dtk == 1, Dk == 6
+6) Since sample INTs dataset timings were dividied by 5, final coefficients are: dtk == 5, Dk == 30, which will produce nice sustained durations
 
 ***
 
