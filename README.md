@@ -22,6 +22,13 @@
 
 <img width="512" src="https://github.com/asigalov61/Music-Triangle/raw/main/Music%20Triangle-Diagram.png">
 
+#### LEGEND
+
+1) dt == delta start-time (0-127)
+2) P == MIDI pitch (0-127)
+3) D == sqrt(dt^2 + P^2) (0-127)
+4) V == P (0-127) or you can do whatever here (i.e inversion or cosine...)
+
 ***
 
 ### Proposed Encoding/Tokenization Sequence Info
