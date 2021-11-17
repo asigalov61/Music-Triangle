@@ -20,7 +20,7 @@
 
 ### Music Triangle Diagram
 
-<img width="512" src="https://github.com/asigalov61/Music-Triangle/raw/main/Model/Music-Triangle-Diagram.png">
+<img width="512" src="https://github.com/asigalov61/Music-Triangle/raw/main/Music%20Triangle-Diagram.png">
 
 ***
 
