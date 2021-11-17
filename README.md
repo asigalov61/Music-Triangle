@@ -37,6 +37,46 @@
 2) Pitch/time-shift data is encoded as (0-127) for notes/chords pitches and (128-255) for time-shift/EOS tokens
 3) I.e. [21, 64, 60, 57, 215, 33, 64, 60, 55, 215, 36, 72, 183, 64, 161]
 
+***
+
+### Model output decoding example
+
+```
+if len(out) != 0:
+  song = []
+  sng = []
+  for o in tqdm.tqdm(out):
+    
+    if o < 128:
+      sng.append(o)
+    else:
+      if len(sng) > 0:
+        sng.append(o-127)
+        song.append(sng)
+        sng = []
+
+
+  song_f = []
+  time = 0
+  for s in tqdm.tqdm(song):
+    for ss in s[:-1]:
+        
+        song_f.append(['note', time, s[-1] * 15, 0, ss, ss])
+    time += (s[-1] * 5)
+
+  detailed_stats = TMIDIX.Tegridy_SONG_to_MIDI_Converter(song_f,
+                                                        output_signature = 'Project Los Angeles',  
+                                                        output_file_name = 'Music-Triangle-Composition', 
+                                                        track_name='Tegridy Code 2021', 
+                                                        number_of_ticks_per_quarter=500)
+  print('Done!')
+    
+detailed_stats
+
+```
+
+***
+
 ### Citation
 
 ```bibtex
