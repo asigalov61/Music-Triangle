@@ -24,6 +24,12 @@
 
 ***
 
+### Proposed Encoding/Tokenization Sequence Info
+
+1) Variable sequence length
+2) Pitch/time-shift data is encoded as (0-127) for notes/chords pitches and (128-255) for time-shift/EOS tokens
+3) I.e. [21, 64, 60, 57, 215, 33, 64, 60, 55, 215, 36, 72, 183, 64, 161]
+
 ### Citation
 
 ```bibtex
